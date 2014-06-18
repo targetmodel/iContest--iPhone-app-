@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+  <title>iContest</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Documentation extras -->
+  <link href="css/typography.css" rel="stylesheet">
+  <link href="css/font-awesome.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+<div class="home-content">
+  <header>
+    <span class="nav-toggle pull-left"><span class="notification">2</span></span>
+    <h1 class="login-brand home-brand"><img src="img/logo.png" alt="iContest" class="img-responsive"/></h1>
+  </header>
+  <div class="header-stripe clearfix">
+    <span class="header-left-stripe pull-left">&nbsp;</span>
+    <span class="header-center-stripe pull-left">&nbsp;</span>
+    <span class="header-right-stripe pull-left">&nbsp;</span>
+  </div>
+  <div class="container">
+    <h4 class="text-center font-24 font-gotham-medium light-font">Create a Contest</h4>
+    <ul class="nav nav-tabs" id="myTab">
+      <li class="active font-gotham-medium"><a data-toggle="tab" href="#photo-based">Photo Based</a></li>
+      <li class="font-gotham-medium"><a data-toggle="tab" href="#about-me">About Me</a></li>
+    </ul>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item">
+      <span class="badge">14</span>
+      <span class="fa fa-map-marker"></span>
+      Where was this photo taken?
+    </li>
+    <li class="list-group-item">
+      <span class="badge">2</span>
+      <span class="fa fa-search"></span>
+      Find me in this photo
+    </li>
+    <li class="list-group-item">
+      <span class="badge">1</span>
+      <span class="fa fa-user"></span>
+      Who is tagged in this photo?
+    </li>
+  </ul>
+  <div class="photo-album-container">
+    <div class="tab-content" id="myTabContent">
+      <div id="photo-based" class="tab-pane fade active in">
+        <p class="text-center font-gotham-medium font-12">PLEASE SELECT A PHOTO ALBUM</p>
+        <ul class="photo-based list-unstyled clearfix">
+          <li>
+            <a href="#"><img src="img/dummy.png" alt="dummy" class="img-responsive"/></a>
+            <span>
+              <input type="checkbox" class="photo-check" id="one"/><label for="one" data-toggle="modal" data-target=".album1-modal"></label>
+            </span>
+          </li>
+          <li>
+            <a href="#"><img src="img/dummy2.png" alt="dummy" class="img-responsive"/></a>
+            <span>
+              <input type="checkbox" class="photo-check" id="two"/><label for="two" data-toggle="modal" data-target=".album2-modal"></label>
+            </span>
+          </li>
+          <li>
+            <a href="#"><img src="img/dummy.png" alt="dummy" class="img-responsive"/></a>
+            <span>
+              <input type="checkbox" class="photo-check" id="three"/><label for="three" data-toggle="modal" data-target=".album3-modal"></label>
+            </span>
+          </li>
+          <li>
+            <a href="#"><img src="img/dummy2.png" alt="dummy" class="img-responsive"/></a>
+            <span>
+              <input type="checkbox" class="photo-check" id="four"/><label for="four" data-toggle="modal" data-target=".album4-modal"></label>
+            </span>
+          </li>
+        </ul>
+        <p class="text-center font-gotham-medium font-12">PLEASE SELECT PHOTOS</p>
+        <ul class="photo-based list-unstyled clearfix">
+          <li>
+            <a href="#"><img src="img/dummy.png" alt="dummy" class="img-responsive"/></a>
+            <span>
+              <input type="checkbox" class="photo-check" id="done"/><label for="done"></label>
+            </span>
+          </li>
+          <li>
+            <a href="#"><img src="img/dummy2.png" alt="dummy" class="img-responsive"/></a>
+            <span>
+              <input type="checkbox" class="photo-check" id="dtwo"/><label for="dtwo"></label>
+            </span>
+          </li>
+          <li>
+            <a href="#"><img src="img/dummy.png" alt="dummy" class="img-responsive"/></a>
+            <span>
+              <input type="checkbox" class="photo-check" id="dthree"/><label for="dthree"></label>
+            </span>
+          </li>
+          <li>
+            <a href="#"><img src="img/dummy2.png" alt="dummy" class="img-responsive"/></a>
+            <span>
+              <input type="checkbox" class="photo-check" id="dfour"/><label for="dfour"></label>
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div id="about-me" class="tab-pane fade">
+        <p class="text-center font-gotham-medium font-12">PLEASE SELECT QUESTION ABOUT YOU</p>
+        <div class="question-list list-unstyled font-gotham-medium">
+          <div>
+            <input type="checkbox" class="list-check" id="aboutme-select-all"/>
+            <label for="aboutme-select-all" class="font-gotham-medium font-12 special-label">SELECT ALL</label>
+          </div>
+          <!--single comment box starts-->
+          <div class="single-album">
+            <div class="single-comment-avatar pull-left" data-target=".select-album-model" data-toggle="modal">
+              <img alt="avatar" src="img/avatars/avatar1.jpg" class="img-responsive">
+            </div>
+            <input type="checkbox" class="list-check" id="aboutme-q-1"/>
+            <label class="single-comment-wrap clearfix" for="aboutme-q-1">
+              <div class="single-comment-content pull-left">
+                <p class="question">Where does Skyler Mobiglue work?</p>
+              </div>
+            </label>
+          </div>
+          <!--single comment box ends-->
+
+          <!--single comment box starts-->
+          <div class="single-album">
+            <div class="single-comment-avatar pull-left" data-target=".select-album-model" data-toggle="modal">
+              <img alt="avatar" src="img/avatars/avatar2.jpg" class="img-responsive">
+            </div>
+            <input type="checkbox" class="list-check" id="aboutme-q-2"/>
+            <label class="single-comment-wrap clearfix" for="aboutme-q-2">
+              <div class="single-comment-content pull-left">
+                <p class="question">Where does Skyler Mobiglue work?</p>
+              </div>
+            </label>
+          </div>
+          <!--single comment box ends-->
+
+          <!--single comment box starts-->
+          <div class="single-album">
+            <div class="single-comment-avatar pull-left" data-target=".select-album-model" data-toggle="modal">
+              <img alt="avatar" src="img/avatars/avatar3.jpg" class="img-responsive">
+            </div>
+            <input type="checkbox" class="list-check" id="aboutme-q-3"/>
+            <label class="single-comment-wrap clearfix" for="aboutme-q-3">
+              <div class="single-comment-content pull-left">
+                <p class="question">Where does Skyler Mobiglue work?</p>
+              </div>
+            </label>
+          </div>
+          <!--single comment box ends-->
+
+          <!--single comment box starts-->
+          <div class="single-album">
+            <div class="single-comment-avatar pull-left" data-target=".select-album-model" data-toggle="modal">
+              <img alt="avatar" src="img/avatars/avatar4.jpg" class="img-responsive">
+            </div>
+            <input type="checkbox" class="list-check" id="aboutme-q-4"/>
+            <label class="single-comment-wrap clearfix" for="aboutme-q-4">
+              <div class="single-comment-content pull-left">
+                <p class="question">Where does Skyler Mobiglue work?</p>
+              </div>
+            </label>
+          </div>
+          <!--single comment box ends-->
+
+          <!--single comment box starts-->
+          <div class="single-album">
+            <div class="single-comment-avatar pull-left" data-target=".select-album-model" data-toggle="modal">
+              <img alt="avatar" src="img/avatars/avatar5.jpg" class="img-responsive">
+            </div>
+            <input type="checkbox" class="list-check" id="aboutme-q-5"/>
+            <label class="single-comment-wrap clearfix" for="aboutme-q-5">
+              <div class="single-comment-content pull-left">
+                <p class="question">Where does Skyler Mobiglue work?</p>
+              </div>
+            </label>
+          </div>
+          <!--single comment box ends-->
+
+          <!--single comment box starts-->
+          <div class="single-album">
+            <div class="single-comment-avatar pull-left" data-target=".select-album-model" data-toggle="modal">
+              <img alt="avatar" src="img/avatars/avatar6.jpg" class="img-responsive">
+            </div>
+            <input type="checkbox" class="list-check" id="aboutme-q-6"/>
+            <label class="single-comment-wrap clearfix" for="aboutme-q-6">
+              <div class="single-comment-content pull-left">
+                <p class="question">Where does Skyler Mobiglue work?</p>
+              </div>
+            </label>
+          </div>
+          <!--single comment box ends-->
+
+          <!--single comment box starts-->
+          <div class="single-album">
+            <div class="single-comment-avatar pull-left" data-target=".select-album-model" data-toggle="modal">
+              <img alt="avatar" src="img/avatars/avatar7.jpg" class="img-responsive">
+            </div>
+            <input type="checkbox" class="list-check" id="aboutme-q-7"/>
+            <label class="single-comment-wrap clearfix" for="aboutme-q-7">
+              <div class="single-comment-content pull-left">
+                <p class="question">Where does Skyler Mobiglue work?</p>
+              </div>
+            </label>
+          </div>
+          <!--single comment box ends-->
+
+          <!--single comment box starts-->
+          <div class="single-album">
+            <div class="single-comment-avatar pull-left" data-target=".select-album-model" data-toggle="modal">
+              <img alt="avatar" src="img/avatars/avatar8.jpg" class="img-responsive">
+            </div>
+            <input type="checkbox" class="list-check" id="aboutme-q-8"/>
+            <label class="single-comment-wrap clearfix" for="aboutme-q-8">
+              <div class="single-comment-content pull-left">
+                <p class="question">Where does Skyler Mobiglue work?</p>
+              </div>
+            </label>
+          </div>
+          <!--single comment box ends-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <a href="#" class="btn btn-social pull-left btn-cancel font-gotham-medium">Cancel</a>
+    <a href="invite-friends.html" class="btn btn-social pull-left btn-continue font-gotham-medium">Continue</a>
+  </div>
+</div>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="single-comment-avatar">
+      <img alt="avatar" src="img/avatars/avatar6.jpg" class="img-responsive img-zoom">
+    </div>
+    <p class="avatar-name text-center no-margin">Kailesh Sanghani</p>
+    <div class="text-center">
+      <a href="profile.html">View Profile</a>
+    </div>
+  </div>
+  <ul class="list-unstyled">
+    <li class="clearfix link-home"><a href="home.html"><span class="icon pull-left"><img src="img/nav-home.png" alt="home" class="img-responsive"/></span>home</a></li>
+    <li class="clearfix link-create-contest"><a href="create-contest-step1.html"><span class="icon pull-left"><img src="img/nav-create.png" alt="create contest" class="img-responsive"/></span>create contest</a></li>
+    <li class="clearfix link-my-contest"><a href="my-contest.html"><span class="icon pull-left"><img src="img/nav-contest.png" alt="my contest" class="img-responsive"/></span>my contest</a></li>
+    <li class="clearfix link-participated"><a href="#"><span class="icon pull-left"><img src="img/nav-participate.png" alt="participate" class="img-responsive"/></span>participated contest</a></li>
+    <li class="clearfix link-notifications"><a href="notifications.html"><span class="icon pull-left"><img src="img/nav-notification.png" alt="notifications" class="img-responsive"/></span>notifications</a><span class="notification">3</span></li>
+    <li class="clearfix link-settings"><a href="#"><span class="icon pull-left"><img src="img/nav-settings.png" alt="settings" class="img-responsive"/></span>settings</a></li>
+    <li class="clearfix link-logout"><a href="login.html"><span class="icon pull-left"><img src="img/nav-logout.png" alt="logout" class="img-responsive"/></span>logout</a></li>
+  </ul>
+</div>
+<div class="mask"></div>
+
+<!--photo based modal starts-->
+<div class="modal fade album1-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+        <h4 class="modal-title font-gotham-medium">What question would you like to ask for this photo?</h4>
+      </div>
+      <ul class="list-unstyled">
+        <li>
+          <input type="radio" class="check" id="album1-modal-answer1" name="question1-answer"/><label for="album1-modal-answer1">Where was this photo taken?</label>
+        </li>
+        <li>
+          <input type="radio" class="check" id="album1-modal-answer2" name="question1-answer"/><label for="album1-modal-answer2">Who is tagged in this photo?</label>
+        </li>
+        <li>
+          <input type="radio" class="check" id="album1-modal-answer3" name="question1-answer"/><label for="album1-modal-answer3">Find me in this photo?</label>
+        </li>
+      </ul>
+      <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-social pull-left btn-cancel font-gotham-medium" type="button">Cancel</button>
+        <button data-dismiss="modal" class="btn btn-social pull-left btn-continue font-gotham-medium" type="button">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--photo based modal ends-->
+
+<!--photo based modal starts-->
+<div class="modal fade album2-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+        <h4 class="modal-title">What question would you like to ask for this photo?</h4>
+      </div>
+      <ul class="list-unstyled">
+        <li>
+          <input type="radio" class="check" id="album1-modal2-answer1" name="question1-answer"/><label for="album1-modal2-answer1">Who is tagged in this photo?</label>
+        </li>
+        <li>
+          <input type="radio" class="check" id="album1-modal2-answer2" name="question1-answer"/><label for="album1-modal2-answer2">Where was this photo taken?</label>
+        </li>
+        <li>
+          <input type="radio" class="check" id="album1-modal2-answer3" name="question1-answer"/><label for="album1-modal2-answer3">Find me in this photo?</label>
+        </li>
+      </ul>
+      <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-social pull-left btn-cancel font-gotham-medium" type="button">Cancel</button>
+        <button data-dismiss="modal" class="btn btn-social pull-left btn-continue font-gotham-medium" type="button">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--photo based modal ends-->
+
+<!--photo based modal starts-->
+<div class="modal fade album3-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+        <h4 class="modal-title">What question would you like to ask for this photo?</h4>
+      </div>
+      <ul class="list-unstyled">
+        <li>
+          <input type="radio" class="check" id="album1-modal3-answer1" name="question1-answer"/><label for="album1-modal3-answer1">Find me in this photo?</label>
+        </li>
+        <li>
+          <input type="radio" class="check" id="album1-modal3-answer2" name="question1-answer"/><label for="album1-modal3-answer2">Who is tagged in this photo?</label>
+        </li>
+        <li>
+          <input type="radio" class="check" id="album1-modal3-answer3" name="question1-answer"/><label for="album1-modal3-answer3">Where was this photo taken?</label>
+        </li>
+      </ul>
+      <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-social pull-left btn-cancel font-gotham-medium" type="button">Cancel</button>
+        <button data-dismiss="modal" class="btn btn-social pull-left btn-continue font-gotham-medium" type="button">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--photo based modal ends-->
+
+<!--photo based modal starts-->
+<div class="modal fade album4-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+        <h4 class="modal-title">What question would you like to ask for this photo?</h4>
+      </div>
+      <ul class="list-unstyled">
+        <li>
+          <input type="radio" class="check" id="album1-modal4-answer1" name="question1-answer"/><label for="album1-modal4-answer1">Where was this photo taken?</label>
+        </li>
+        <li>
+          <input type="radio" class="check" id="album1-modal4-answer2" name="question1-answer"/><label for="album1-modal4-answer2">Find me in this photo?</label>
+        </li>
+        <li>
+          <input type="radio" class="check" id="album1-modal4-answer3" name="question1-answer"/><label for="album1-modal4-answer3">Who is tagged in this photo?</label>
+        </li>
+      </ul>
+      <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-social pull-left btn-cancel font-gotham-medium" type="button">Cancel</button>
+        <button data-dismiss="modal" class="btn btn-social pull-left btn-continue font-gotham-medium" type="button">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--photo based modal ends-->
+
+<!--select album modal starts-->
+<div aria-hidden="true" aria-labelledby="myLargeModalLabel" role="dialog" tabindex="-1" class="modal fade select-album-model select-album-single-modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title font-gotham-medium text-center">Select Album</h4>
+      </div>
+      <ul class="select-album list-unstyled clearfix">
+        <li id="album-picture-one">
+          <a href="#"><img class="img-responsive" alt="dummy" src="img/dummy.png"></a>
+        </li>
+        <li id="album-picture-two">
+          <a href="#"><img class="img-responsive" alt="dummy" src="img/dummy2.png"></a>
+        </li>
+        <li id="album-picture-three">
+          <a href="#"><img class="img-responsive" alt="dummy" src="img/dummy.png"></a>
+        </li>
+        <li id="album-picture-four">
+          <a href="#"><img class="img-responsive" alt="dummy" src="img/dummy2.png"></a>
+        </li>
+        <li id="album-picture-five">
+          <a href="#"><img class="img-responsive" alt="dummy" src="img/dummy.png"></a>
+        </li>
+        <li id="album-picture-six">
+          <a href="#"><img class="img-responsive" alt="dummy" src="img/dummy2.png"></a>
+        </li>
+      </ul>
+      <div class="album-picture-gallery-wrap">
+        <div class="container">
+          <a href="#" class="btn btn-social btn-green font-gotham-medium margin-both back-to-album">BACK TO ALBUM</a>
+        </div>
+        <div>
+          <!--album one pictures start-->
+          <div class="album-picture-gallery album-picture-one clearfix">
+            <img src="img/avatars/avatar1.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar2.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar3.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar4.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar5.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar6.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+          </div>
+          <!--album one pictures ends-->
+          <!--album two pictures start-->
+          <div class="album-picture-gallery album-picture-two clearfix">
+            <img src="img/avatars/avatar4.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar1.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar2.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar3.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar5.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar6.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+          </div>
+          <!--album two pictures ends-->
+          <!--album three pictures start-->
+          <div class="album-picture-gallery album-picture-three clearfix">
+            <img src="img/avatars/avatar1.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar2.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar6.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar3.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar4.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar5.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+          </div>
+          <!--album three pictures ends-->
+          <!--album four pictures start-->
+          <div class="album-picture-gallery album-picture-four clearfix">
+            <img src="img/avatars/avatar4.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar5.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar6.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar1.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar2.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+            <img src="img/avatars/avatar3.jpg" alt="avatar" class="img-responsive" data-dismiss="modal"/>
+          </div>
+          <!--album four pictures ends-->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-social pull-left btn-cancel font-gotham-medium" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-social pull-left btn-continue font-gotham-medium" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

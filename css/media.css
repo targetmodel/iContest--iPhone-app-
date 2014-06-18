@@ -1,0 +1,66 @@
+/* iPhone 4 retina portrait */
+@media (device-height: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation:portrait) {
+  .sidebar-header{
+    padding-bottom: 6px;
+  }
+  .sidebar ul li {
+    margin: 12px 0;
+  }
+  .sidebar{
+    padding-top: 6px;
+  }
+  .avatar-name{
+    font-size: 16px;
+    margin: 0 !important;
+  }
+  .question-wrap{
+    min-height: 372px;
+  }
+  .question-wrap .question-options a,
+  .question-wrap .question-options .options{
+    padding: 5px 16px;
+    min-height: 30px;
+    line-height: 30px;
+  }
+  .question-wrap .question-options p.lengthy-option, .question-wrap .question-options .options.lengthy-option {
+    line-height: 15px;
+  }
+  .header-stripe span:last-child{
+    width: 34.5%;
+  }
+  .header-stripe span:last-child{
+    width: 34.5%;
+  }
+}
+/* iPhone 4 retina landscape */
+@media (device-height: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation:landscape) {
+  #iphone4_retina_landscape{
+    display: block;
+  }
+  .header-stripe span:last-child{
+    width: 34.5%;
+  }
+
+}
+
+/* iPhone 5 or iPod Touch 5th generation, portrait */
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation:portrait) {
+  #iphone5_portait{
+    display: block;
+  }
+  .header-stripe span:last-child{
+    width: 34.5%;
+  }
+  .header-stripe span:last-child{
+    width: 34.5%;
+  }
+}
+/* iPhone 5 landscape */
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation:landscape) {
+  #iphone5_landscape{
+    display: block;
+  }
+  .header-stripe span:last-child{
+    width: 34.5%;
+  }
+}
